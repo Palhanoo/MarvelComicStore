@@ -72,7 +72,9 @@ export default () => {
         <Container>
 
             <Area>
+
                 <Box>
+                    
                     <BoxArea>
                         {loading &&
                             <ActivityIndicator size="large" color="#FFF" />
@@ -149,6 +151,7 @@ export default () => {
                 </CardBox>
 
             </Area>
+
         </Container>
     )
 }
