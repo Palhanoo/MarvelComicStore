@@ -9,6 +9,9 @@ import {
     DescriptionArea,
     ComprarArea,
     ComprarBotao,
+    FavoritarArea,
+    FavoritarBotao,
+    ComprarBotaoArea,
 } from './style';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigation, useRoute } from '@react-navigation/native';
@@ -29,7 +32,7 @@ export default () => {
     const dispatch = useDispatch();
     const list = useSelector(state => state.comics.comic);
 
-    const id = route.params.id
+    const id = route.params.id;
 
 
 
@@ -45,11 +48,15 @@ export default () => {
         getComic();
     }, []);
 
-    const quadrinho = comic;
+    const description = comic.description;
 
-    const description = comic.description
+    //console.log(image)
 
-    console.log(image)
+    const handleClickButton = () => {
+        navigation.navigate('Checkout', {
+            id
+        })
+    }
 
     return (
         <Container>
@@ -58,7 +65,7 @@ export default () => {
                     <ActivityIndicator size="large" color="#FFF" />
                 }
                 <ImageArea>
-                    <Imagem source={{uri: image !=='' ? image : undefined}} />
+                    <Imagem source={{ uri: image !== '' ? image : undefined }} />
                 </ImageArea>
 
                 <TitleArea>
@@ -75,7 +82,15 @@ export default () => {
                 </DescriptionArea>
 
                 <ComprarArea>
-                    <ComprarBotao title="Compra ae meu" />
+                    
+                    <ComprarBotaoArea>
+                        <ComprarBotao title="Compra ae meu" onPress={handleClickButton} />
+                    </ComprarBotaoArea>
+
+                    <FavoritarArea>
+                        <FavoritarBotao title="Salvar nos favoritos" disabled={true} />
+                    </FavoritarArea>
+                    
                 </ComprarArea>
             </Box>
         </Container>

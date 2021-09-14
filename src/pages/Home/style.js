@@ -11,6 +11,13 @@ export const SearchArea = styled.View``;
 
 export const SearchInput = styled.TextInput`
 color:#FFF
+border: 1px;
+border-color: #526180;
+border-radius: 15px;
+margin-top:15px;
+margin-left: 15px;
+margin-right: 15px;
+padding-left:10px;
 `;
 
 export const SearchButton = styled.Button``;
@@ -19,9 +26,6 @@ export const ComicsList = styled.SafeAreaView`
 flex:1;
 margin-top:10px;
 display:flex;
-`;
-
-export const ComicArea = styled.ScrollView`
 `;
 
 export const Lista = styled.FlatList``;

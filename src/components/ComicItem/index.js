@@ -1,13 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import { View } from 'react-native';
-import Api from '../../Api';
-import { Box, ComicImage, ComicTitle, ComicDescription, ComicPrice, ImageArea, TextArea, BoxArea, TitleArea } from './style';
-import { useNavigation } from '@react-navigation/native';
-
+import React from 'react';
+import { Box, 
+    ComicImage, 
+    ComicTitle, 
+    ComicDescription, 
+    ComicPrice, 
+    ImageArea, 
+    TextArea, 
+    BoxArea, 
+    TitleArea 
+} from './style';
 
 export default ({ data, onPress }) => {
 
-    const navigation = useNavigation();
     const comics = data;
 
     const id = comics.id
@@ -29,11 +33,13 @@ export default ({ data, onPress }) => {
                 </ImageArea>
 
                 <TextArea>
+                    
                     <TitleArea>
                         <ComicTitle>{data.title}</ComicTitle>
                     </TitleArea>
                     
                     <ComicDescription numberOfLines={2} >{comics.description}</ComicDescription>
+
                 </TextArea>
 
               

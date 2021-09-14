@@ -36,12 +36,20 @@ margin:5px;
 export const DescriptionArea = styled.View``;
 
 export const ComprarArea = styled.View`
-margin:10px;
-padding:5px;
+flex-direction:row;
+align-content:space-between;
+margin-top:10px;
+`;
+
+export const ComprarBotaoArea = styled.View`
+margin-right:5px;
 `;
 
 export const ComprarBotao = styled.Button``;
 
-export const favoritarArea = styled.View``;
+export const FavoritarArea = styled.View`
+margin-left:5px;
+`;
 
-export const FavoritarBotao = styled.Button``;
+export const FavoritarBotao = styled.Button`
+`;

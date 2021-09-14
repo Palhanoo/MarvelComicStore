@@ -1,18 +1,29 @@
-import React, {useEffect, useState} from 'react';
-import { 
+import React, { useState } from 'react';
+import {
+    ClickArea,
     Container,
+    Imagem,
     Texto
 } from './style';
-
-import Api from '../../Api'
 
 
 export default () => {
 
-    return(
+    const [source, setSource] = useState(require('../../assets/troubleshoot.jpg'))
+
+    const handleClickButton = () => {
+        setSource(require('../../assets/vegeta.hue.jpg'))
+        setTimeout(function () { setSource(require('../../assets/troubleshoot.jpg')) }, 3000);
+    }
+
+    return (
         <Container>
-            
-            <Texto>Tela FAVORITOS</Texto>
+
+            <Texto>Em Construção</Texto>
+
+            <ClickArea onPress={handleClickButton}>
+                <Imagem source={source} />
+            </ClickArea>
 
         </Container>
     )

@@ -5,15 +5,25 @@ const Tab = createBottomTabNavigator();
 
 import Home from '../pages/Home';
 import Favorites from '../pages/Favorites';
-                                
+
+import HomeIcon from '../components/HomeIcon';
+import TabBarIcon from '../components/TabBarIcon';
+
+
 export default () => (
-    <Tab.Navigator screenOptions={{
+    <Tab.Navigator 
+        screenOptions={({route})=>({
         headerShown:false,
-        activetTintColor:'blue',
-        inactiveTintColor:'red',
-        labelStyle:{fontSize: 20}
-    }}  initialRouteName="Home">
-        <Tab.Screen name="Home" component={Home} />
-        <Tab.Screen name="Favorites" component={Favorites} />
+        labelStyle:{fontSize: 20},
+        tabBarActiveTintColor:'#000',
+        tabBarInactiveTintColor:'grey',
+        tabBarStyle:{backgroundColor: '#526180'},  
+        tabBarIcon:() => <TabBarIcon name={route.name}/>
+    })} initialRouteName="Home">
+        
+        <Tab.Screen name="Home" component={Home}/>
+
+        <Tab.Screen name="Favorites" component={Favorites}/>
+        
     </Tab.Navigator>
 );
