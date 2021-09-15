@@ -51,11 +51,15 @@ export default () => {
     const getOneComic = async (comicsearch) => {
         if (comicsearch != '') {
 
+            setComicsearch(comicsearch.toString())
+
             setLoading(true)
 
             let res = await Api.getOneComic(comicsearch);
 
-            console.log(res.data.results);
+            //console.log(res.data.results);
+
+            //console.log(comicsearch)
 
             setComics(res.data.results);
 

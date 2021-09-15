@@ -9,7 +9,7 @@ const hash = md5(time + MY_PRIVATE_KEY + MY_PUBLIC_KEY );
 
 export default {
     getComics: async () => {
-        const req = await fetch(`http://gateway.marvel.com/v1/public/comics?ts=${time}&apikey=${MY_PUBLIC_KEY}&hash=${hash}&offset=15600`)
+        const req = await fetch(`http://gateway.marvel.com/v1/public/comics?ts=${time}&apikey=${MY_PUBLIC_KEY}&hash=${hash}&offset=15600&limit=30`)
 
         const json = await req.json();
         return json;
