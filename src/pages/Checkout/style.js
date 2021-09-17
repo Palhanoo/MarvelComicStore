@@ -109,15 +109,19 @@ export const CardBoxArea = styled.View`
 flex-direction:row;
 justify-content:space-between;
 margin:10px;
+margin-top:10%;
 `;
 
 export const CardTextArea = styled.View`
-justify-content:space-between
+justify-content:space-between;
 `;
 
-export const ComprarBotao = styled.Button``;
+export const ComprarBotao = styled.Button`
+`;
 
-export const CardText = styled.Text``;
+export const CardText = styled.Text`
+color: #FDFDFD
+`;
 
 export const CardInputArea = styled.View``;
 

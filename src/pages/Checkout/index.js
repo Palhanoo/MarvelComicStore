@@ -117,9 +117,9 @@ export default () => {
                             <PaymentAreaInput >
 
 
-                                <PaymentInput placeholder="N° do cartão" />
-                                <PaymentInput placeholder="Validade" />
-                                <PaymentInput placeholder="CVC" />
+                                <PaymentInput maxLength={12} placeholder="N° do cartão" />
+                                <PaymentInput maxLength={6} placeholder="Validade" />
+                                <PaymentInput maxLength={3} placeholder="CVC" />
 
                             </PaymentAreaInput>
 
@@ -139,7 +139,7 @@ export default () => {
 
                         <CardInputArea>
 
-                            <CardInput />
+                            <CardInput maxLength={6} />
                             <CardText>$ {price}</CardText>
 
                         </CardInputArea>
