@@ -1,8 +1,25 @@
-# MarvelComicStore
+# Project Name
 
-**Aplicação criada em React Native utilizando a API da Marvel**
+Marvel Comic Store
 
-*Pra Iniciar a aplicação, basta executar o CMD, navegar até a pasta do projeto, e executar o comando "npm install" para instalar as dependências necessárias, e em seguida, "npx react-native run-android" (pra emular no android)*
+## Introduction
 
-Nessa aplicação, é possível você visualizar os quadrinhos da Marvel, além de conseguir pesquisar algum específico pelo nome, como também é possível ver os preços e a descrição dos quadrinhos e basicamente simular uma compra.
+This was a Comic Store App using the Marvel API, in this application, you can view Marvel comics, in addition to being able to search for a specific one by name, you can also see the prices and description of the comics and basically simulate a purchase.
+
+## Technologies and Libraries
+
+- JavaScript
+- React-Native
+- Redux
+- Axios
+
+## Development Status
+
+- [ ] In active development
+- [X] No longer actively developed
+- [ ] Completed
+
+## License
+
+This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
 
